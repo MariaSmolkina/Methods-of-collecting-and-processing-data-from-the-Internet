@@ -1,0 +1,7 @@
+import requests
+import json
+
+url = 'https://api.github.com/users/MariaSmolkina/repos'
+response = requests.get(url)
+with open('data.json', 'w') as f:
+    json.dump(response.json(), f)
